@@ -8,6 +8,7 @@ function appStart() {
   const displayGameclear = () => {
     const div = document.createElement("div");
     div.innerText = "❤️❤️정답입니다❤️❤️";
+    div.className = "ok";
     div.style =
       "display:flex; justify-content:center; font-size:20px; align-items:center; position:absolute; top:40vh; left: 35vw; background-color:black;color:white; padding: 40px;";
     document.body.appendChild(div);
@@ -16,6 +17,7 @@ function appStart() {
   const displayGamover = () => {
     const div = document.createElement("div");
     div.innerText = "🤨🤨❌❌❌❌😱😱";
+    div.className = "no";
     div.style =
       "display:flex; justify-content:center; font-size:20px; align-items:center; position:absolute; top:40vh; left: 35vw; background-color:black;color:white; padding: 40px;";
     document.body.appendChild(div);
@@ -102,7 +104,7 @@ function appStart() {
     }
   };
 
-  // const handlekeyboard = (event) => {
+  // const handlekeyclick = (event) => {
   //   const clickTaget = event.taget;
   //   const thisBlock = document.querySelector(
   //     `.board-block[data-index='${attempts}${index}']`
@@ -119,11 +121,6 @@ function appStart() {
   //     thisBlock.innerText = clickTaget;
   //     index += 1;
   // };
-
-  // const keyBoard = document.querySelectorAll(".keyboard-block");
-  // keyBoard.forEach(() => {
-  //   window.addEventListener("click", handlekeyboard);
-  // });
 
   const handleKeyclick = (event) => {
     const keyclick = event.target.dataset.key;

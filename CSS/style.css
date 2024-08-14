@@ -28,3 +28,97 @@ body {
     display: none;
   }
 }
+
+.ok {
+  animation: 정답 5s linear infinite alternate;
+}
+
+.no {
+  animation: 오답 5s linear infinite alternate;
+}
+
+.turn:active {
+  animation: 뒤돌아 2s linear infinite alternate;
+}
+
+@keyframes 뒤돌아 {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(180deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes 정답 {
+  0% {
+    background: red;
+    transform: scale(2) rotate(0deg);
+    color: white;
+  }
+  10% {
+    background: orange;
+    transform: scale(1);
+    color: black;
+  }
+  20% {
+    background: yellow;
+    transform: scale(2) rotate(90deg);
+    color: black;
+  }
+  30% {
+    background: green;
+    transform: scale(1) rotate(180deg);
+    color: black;
+  }
+  40% {
+    background: blue;
+    transform: scale(2) rotate(270deg);
+    color: white;
+  }
+  70% {
+    background: navy;
+    transform: scale(1);
+    color: white;
+  }
+  100% {
+    background: red;
+    transform: scale(2) rotate(0deg);
+    color: white;
+  }
+}
+
+@keyframes 오답 {
+  0% {
+    background: red;
+    transform: scale(2) rotate(0deg) translate(-100px, -100px);
+    color: white;
+  }
+  20% {
+    background: orange;
+    transform: scale(1);
+  }
+  40% {
+    background: yellow;
+    transform: scale(2) rotate(90deg) translate(0px, 0px);
+  }
+  60% {
+    background: green;
+    transform: scale(1) rotate(180deg) translate(-100px, 100px);
+  }
+  80% {
+    background: blue;
+    transform: scale(2) rotate(0deg) translate(100px, -100px);
+  }
+  90% {
+    background: navy;
+    transform: scale(1) rotate(90deg);
+  }
+  100% {
+    background: red;
+    transform: scale(2) rotate(180deg) translate(100px, 100px);
+  }
+}

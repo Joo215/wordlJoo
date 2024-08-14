@@ -39,3 +39,27 @@ footer {
   font-weight: bold;
   border-radius: 5px;
 }
+
+.keyboard-block:hover {
+  animation: 눌름 3s ease-in-out infinite alternate;
+}
+
+.keyboard-block__up:hover {
+  animation: 눌름 3s ease-in-out infinite alternate;
+}
+
+@keyframes 눌름 {
+  0% {
+    transform: scale(1);
+    background-color: rgb(211, 214, 218);
+  }
+  30% {
+    transform: scale(0.5);
+    background-color: blueviolet;
+    color: white;
+  }
+  100% {
+    transform: scale(1);
+    background-color: rgb(211, 214, 218);
+  }
+}
